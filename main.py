@@ -34,7 +34,7 @@ def get_vector_label(data: Vector):
 
     statistics['total_processed'] += 1
     if statistics.get('processed_label'+'_'+str(label), None) is None:
-        statistics['processed_label'+'_'+str(label)] = 0
+        statistics['processed_label'+'_'+str(label)] = 1
     else:
         statistics['processed_label'+'_'+str(label)] +=1
     return f'Example label is {label}. {statistics}'
