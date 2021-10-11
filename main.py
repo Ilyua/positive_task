@@ -33,7 +33,7 @@ def get_vector_label(data: Vector):
         label =  get_label(clustering, output)
 
     statistics['total_processed'] += 1
-    if statistics.get(label, None) is None:
+    if statistics.get('processed_label'+'_'+str(label), None) is None:
         statistics['processed_label'+'_'+str(label)] = 0
     else:
         statistics['processed_label'+'_'+str(label)] +=1
